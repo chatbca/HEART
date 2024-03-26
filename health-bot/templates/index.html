@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Bot</title>
+</head>
+<body>
+    <h1>Health Bot</h1>
+    <form action="/predict" method="post">
+        <label for="symptom">Enter your symptom:</label><br>
+        <input type="text" id="symptom" name="symptom"><br>
+        <label for="days">Number of days:</label><br>
+        <input type="text" id="days" name="days"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+    <div>
+        <h2>Prediction:</h2>
+        <p>{{ result }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
